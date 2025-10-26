@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 4rem;
-  background-color: #1f1f1f;
+  background-color: #15171a;
   border-bottom: 1px solid #333;
   position: sticky;
   top: 0;
@@ -15,13 +15,13 @@
 .navbar-brand a {
   font-size: 1.8rem;
   font-weight: 700;
-  color: #ff3c38;
+  color: #d1ed2d;
   letter-spacing: 1px;
   transition: color 0.3s ease;
 }
 
 .navbar-brand a:hover {
-  color: #ffa08c;
+  color: #99ec15;
 }
 
 .navbar-links {
@@ -50,7 +50,7 @@
 }
 
 .nav-link:hover {
-  color: #ff3c38;
+  color: #d1ed2d;
 }
 
 .nav-link:hover::after {
