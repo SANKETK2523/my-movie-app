@@ -1,0 +1,145 @@
+
+.home {
+  padding: 2rem 4rem;
+  min-height: calc(100vh - 70px);
+  background-color: #00183e; 
+}
+
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  z-index: 1; 
+}
+
+.search-input {
+  flex: 1;
+  max-width: 400px;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #333;
+  background-color: #1f1f1f;
+  color: #fff;
+  font-size: 1rem;
+  transition: border 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border: 1px solid #ff3c38;
+}
+
+.search-button {
+  padding: 0.6rem 1.2rem;
+  background-color: #ff3c38;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #e63632;
+}
+
+
+.error-message {
+  text-align: center;
+  color: #ff6b6b;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  z-index: 1;
+}
+
+.loading {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #bbb;
+  margin-top: 2rem;
+  z-index: 1;
+}
+
+
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 2rem;
+  z-index: 1;
+}
+
+.movie-card {
+  background-color: #1f1f1f;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.5s ease;
+  opacity: 0;
+  animation: fadeInUp 0.5s forwards;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+}
+
+.movie-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.movie-card .movie-info {
+  padding: 1rem;
+}
+
+.movie-card .movie-info h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.movie-card .movie-info p {
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .home {
+    padding: 1rem 2rem;
+  }
+
+  .search-form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-input {
+    max-width: 100%;
+  }
+
+  .movies-grid {
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  .movie-card img {
+    height: 200px;
+  }
+}
